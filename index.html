@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Relógio</title>   
     <style type="text/css">
@@ -34,4 +35,61 @@
     </marquee>
 </div>
     </body>
+=======
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu relógio digital</title>
+    <div id="cx1">
+        <script language="javascript">         
+                   
+        var data=new Date();
+        var meses=new Array("Janeiro","fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+        var dsem=new Array("Domingo","Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira","Sabado");
+
+         document.write(dsem[data.getDay()] + ", " + data.getDate() + " de " + meses[data.getMonth()] + " de " +  data.getFullYear() + "<br/>");
+     
+
+        function movRel() {
+                    var tempo=new Date();
+                    var hora=tempo.getHours();
+                    var min=tempo.getMinutes();
+                    var seg=tempo.getSeconds();
+             
+            if(hora<10){
+                hora="0"+tempo.getHours();
+             }
+
+            if(min<10) {
+                min="0"+tempo.getMinutes();
+             }
+
+            if(seg<10) {
+                seg="0"+tempo.getSeconds();
+             }
+
+                var impHoras=hora + ":" + min + ":" + seg;
+
+                document.frel.rel.value=impHoras;
+
+                setTimeout("movRel()",1000);
+                 }
+      </script> 
+     
+     </head>
+   
+    <body onload="movRel()">
+     
+        <main class="main"></main>
+        
+            <form name="frel">
+                <input class="input" type="text" name="rel" size="10">
+        
+            </form>
+        </main>
+    </body>
+  </div>
+</head>
+
+
+>>>>>>> parent of 9108b0a (Merge branch 'design-rl')
 </html>
